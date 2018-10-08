@@ -5,6 +5,12 @@ import 'react-table/react-table.css';
 const VehicleModelComponent = (props: any) => {
   return (
     <div className='center'>
+      <select
+        onChange={props.onChange} >
+        {props.options.map((option: string) => {
+          return <option value={option} key={option} >{option}</option>
+        })}
+      </select>
       <ReactTable
         data={props.models[props.match.params.id]}
         columns={[

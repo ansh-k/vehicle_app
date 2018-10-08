@@ -2,6 +2,7 @@ import IAction from '../interfaces/action';
 import {
   FETCH_ALL_MAKES_SUCCEED,
   FETCH_MODELS_BY_MAKE_SUCCEED,
+  FETCH_MODELS_BY_MAKEYEAR_SUCCEED
 } from '../types';
 
 const initialState = {
@@ -17,6 +18,7 @@ export default function(state = initialState, action: IAction) {
         makes: action.makes
       }
     case FETCH_MODELS_BY_MAKE_SUCCEED:
+    case FETCH_MODELS_BY_MAKEYEAR_SUCCEED:
       return {
         ...state,
         models:{
