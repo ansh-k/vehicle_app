@@ -46,6 +46,12 @@
     "@types/react" "*"
     redux "^4.0.0"
 
+"@types/react-table@^6.7.12":
+  version "6.7.12"
+  resolved "https://registry.yarnpkg.com/@types/react-table/-/react-table-6.7.12.tgz#216ca51d5c91c812d6c8d6e06f4ee5cbd1138d56"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^16.4.15":
   version "16.4.15"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.15.tgz#1f24f1d03b1fc682d92f8485be99d59bf7981191"
@@ -1471,6 +1477,10 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classnames@^2.2.5:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
 clean-css@4.2.x:
   version "4.2.1"
@@ -5843,6 +5853,12 @@ react-scripts-ts@3.1.0:
     whatwg-fetch "2.0.3"
   optionalDependencies:
     fsevents "^1.1.3"
+
+react-table@^6.8.6:
+  version "6.8.6"
+  resolved "https://registry.yarnpkg.com/react-table/-/react-table-6.8.6.tgz#a0ad8b4839319052d5befc012603fb161e52ede3"
+  dependencies:
+    classnames "^2.2.5"
 
 react@^16.5.2:
   version "16.5.2"
