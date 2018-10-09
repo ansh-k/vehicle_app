@@ -10,7 +10,7 @@ class App extends React.Component {
       <Router>
         <div>
           <Route exact={true} path="/" component={VehicleContainer}/>
-          <Route path="/make/:id/model" component={VehicleModelContainer}/>
+          <Route exact={true} path="/make/:id/model" component={VehicleModelContainer}/>
         </div>
       </Router>
     );

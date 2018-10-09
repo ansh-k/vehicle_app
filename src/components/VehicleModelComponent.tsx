@@ -5,6 +5,7 @@ import 'react-table/react-table.css';
 const VehicleModelComponent = (props: any) => {
   return (
     <div className='center'>
+      <h2> Models of Make </h2>
       <select
         onChange={props.onChange} >
         {props.options.map((option: string) => {

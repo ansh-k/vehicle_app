@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as Loader from 'react-loader';
 import { connect } from 'react-redux';
 import { modelsByMake, modelsByMakeYear } from '../actions/vehicle.action';
 import VehicleModelComponent from '../components/VehicleModelComponent';
@@ -20,9 +21,11 @@ class VehicleModelContainer extends React.Component<any, any> {
 
   public render() {
     return(
-      <VehicleModelComponent {...this.props}
-        onChange={this.updateFiltter}
-        options={this.options} />
+      <Loader loaded={this.props.loaded} className="spinner">
+        <VehicleModelComponent {...this.props}
+          onChange={this.updateFiltter}
+          options={this.options} />
+      </Loader>
     )
   }
 }
@@ -34,6 +37,7 @@ const mapDispatchToProps = {
 
 const mapStateToProps = (state: IState) => {
   return {
+    loaded: state.vehicle.loaded,
     models: state.vehicle.models
   }
 }

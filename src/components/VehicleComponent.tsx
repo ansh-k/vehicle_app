@@ -5,6 +5,7 @@ import 'react-table/react-table.css';
 const VehicleComponent = (props: any) => {
   return (
     <div className='center'>
+      <h2> Makes of Vehicle </h2>
       <ReactTable
         data={props.makes}
         columns={[

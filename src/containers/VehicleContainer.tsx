@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as Loader from 'react-loader';
 import { connect } from 'react-redux';
 import { allMakes } from '../actions/vehicle.action';
 import VehicleComponent from '../components/VehicleComponent';
@@ -11,7 +12,9 @@ class VehicleContainer extends React.Component<any, any> {
 
   public render() {
     return(
-      <VehicleComponent {...this.props}/>
+      <Loader loaded={this.props.loaded} className="spinner">
+        <VehicleComponent {...this.props}/>
+      </Loader>
     )
   }
 }
@@ -22,6 +25,7 @@ const mapDispatchToProps = {
 
 const mapStateToProps = (state: IState) => {
   return {
+    loaded: state.vehicle.loaded,
     makes: state.vehicle.makes
   }
 }
