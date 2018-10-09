@@ -1,8 +1,9 @@
 import * as React from 'react';
 import ReactTable from "react-table";
 import 'react-table/react-table.css';
+import IVehicleModelProps from '../interfaces/vehicleModelProps';
 
-const VehicleModelComponent = (props: any) => {
+const VehicleModelComponent = (props: IVehicleModelProps) => {
   return (
     <div className='center'>
       <h2> Models of Make </h2>

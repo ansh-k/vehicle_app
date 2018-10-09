@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import { allMakes } from '../actions/vehicle.action';
 import VehicleComponent from '../components/VehicleComponent';
 import IState from '../interfaces/state';
+import IVehicleProps from '../interfaces/vehicleProps';
 
-class VehicleContainer extends React.Component<any, any> {
+class VehicleContainer extends React.Component<IVehicleProps> {
   public async componentDidMount() {
     await this.props.allMakes();
   }
